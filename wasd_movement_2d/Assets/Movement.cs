@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+
+// added diagonal movement
 public class Movement : MonoBehaviour
 {
     public KeyCode jumpKey;

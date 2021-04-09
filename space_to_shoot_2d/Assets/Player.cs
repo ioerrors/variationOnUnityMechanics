@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
+// changed to only allow shoot on mouse0, since space is a terrible button for shoot
+// in my subjective opinion
 public class Player : MonoBehaviour {
 
     private float speed = 7f;
@@ -47,7 +50,7 @@ public class Player : MonoBehaviour {
     }
     
     private void ProcessBulletSpwan() {
-      if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Mouse0)) && Time.time > nextFire) {
+      if ((Input.GetKey(KeyCode.Mouse0)) && Time.time > nextFire) {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         Rigidbody2D re = bullet.GetComponent<Rigidbody2D>();
         re.velocity = firePoint.up * bulletSpeed;

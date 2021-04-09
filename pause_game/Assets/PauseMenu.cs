@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// changed pause button to k, 
+// because this is youtube now
 public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
@@ -8,7 +10,7 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.K))
         {
             if (isPaused)
             {

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 
+// we changed space button to B for bounce 
+// because bouncing is more fun!
 public class Player : MonoBehaviour
 {
     public bool grounded = true;
@@ -16,7 +18,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && IsGrounded()) {
+        if(Input.GetKeyDown(KeyCode.B) && IsGrounded()) {
             rb2d.velocity = Vector2.up * jumpPower;
         }
     }

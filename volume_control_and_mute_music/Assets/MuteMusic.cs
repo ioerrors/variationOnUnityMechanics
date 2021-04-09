@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+
+// changed initial value to muted, rather than starting loud
+// this can save people from loud playing music in a game when they didn't
+// realize it would have sound
 public class MuteMusic : MonoBehaviour
 {
     public AudioSource source;
@@ -9,7 +13,7 @@ public class MuteMusic : MonoBehaviour
     private void Start()
     {
         button = this.GetComponent<Button>();
-        source.mute = false;
+        source.mute = true;
         ChangeText();
     }
 
